@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('SCM'){
+        stage('Clone'){
             steps{
                 sh'''
                 echo "Pipeline Started"
