@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sahil-deploy
+  name: sahil-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sahil-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sahil-deploy
+    spec:
+      containers:
+      - image: sahil0824/flaskapp
+        name: sahil0824
+        resources: {}
+status: {}

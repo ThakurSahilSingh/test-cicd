@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sahil-deploy
+  name: sahil-deploy
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: sahil-deploy
+  type: NodePort
+status:
+  loadBalancer: {}
